@@ -69,16 +69,17 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         'test.pdf',
-        { from: '../node_modules/pdfjs-dist/cmaps/', to: 'cmaps/' },
+        { from: '../node_modules/@orbiseed/pdfjs-dist/cmaps/', to: 'cmaps/' },
       ],
     }),
     new HtmlWebpackPlugin({
       template: 'index.html',
     }),
-    isProduction && new MiniCssExtractPlugin({
-      filename: '[name].[chunkhash:8].css',
-      chunkFilename: '[name].[chunkhash:8].css',
-    }),
+    isProduction &&
+      new MiniCssExtractPlugin({
+        filename: '[name].[chunkhash:8].css',
+        chunkFilename: '[name].[chunkhash:8].css',
+      }),
     isDevelopment && new ReactRefreshWebpackPlugin(),
   ].filter(Boolean),
   optimization: {
