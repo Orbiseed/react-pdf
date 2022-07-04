@@ -47,7 +47,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: "./sample.pdf" },
-        { from: "node_modules/@orbiseed/pdfjs-dist/cmaps/", to: "cmaps/" },
+        { from: "node_modules/pdfjs-dist/cmaps/", to: "cmaps/" },
       ],
     }),
   ],

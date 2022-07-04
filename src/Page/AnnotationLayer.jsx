@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
-import * as pdfjs from "@orbiseed/pdfjs-dist";
+import * as pdfjs from "pdfjs-dist";
 import makeCancellable from "make-cancellable-promise";
 
 import DocumentContext from "../DocumentContext";

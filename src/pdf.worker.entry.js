@@ -10,4 +10,4 @@
 (typeof window !== "undefined"
   ? window
   : {}
-).pdfjsWorker = require("@orbiseed/pdfjs-dist/build/pdf.worker.js");
+).pdfjsWorker = require("pdfjs-dist/build/pdf.worker.js");
