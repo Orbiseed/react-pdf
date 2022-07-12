@@ -89,7 +89,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.15.3",
-    "@orbiseed/pdfjs-dist": "^2.11.32",
+    "@orbiseed/pdfjs-dist": "^2.11.33",
     "file-loader": "^6.0.0",
     "make-cancellable-promise": "^1.0.0",
     "make-event-props": "^1.1.0",
