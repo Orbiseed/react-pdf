@@ -6,8 +6,8 @@
   "module": "dist/esm/entry.js",
   "source": "src/entry.js",
   "scripts": {
-    "build": "yarn build-js-all && yarn copy-styles",
-    "build-js-all": "yarn build-js-esm && yarn build-js-umd",
+    "build": "npm run build-js-all && npm run copy-styles",
+    "build-js-all": "npm run build-js-esm && pnm run build-js-umd",
     "build-js-esm": "BABEL_ENV=production-esm babel src -d dist/esm --ignore \"**/*.spec.js,**/*.spec.jsx\"",
     "build-js-umd": "BABEL_ENV=production-umd babel src -d dist/umd --ignore \"**/*.spec.js,**/*.spec.jsx\"",
     "clean": "rimraf dist",
@@ -15,8 +15,7 @@
     "jest": "jest",
     "jest-coverage": "jest --coverage",
     "lint": "eslint sample/ src/ test/ --ext .jsx,.js",
-    "prepack": "yarn clean && yarn build",
-    "test": "yarn lint && yarn jest"
+    "prepack": "npm run build"
   },
   "jest": {
     "setupFiles": [
@@ -104,9 +103,9 @@
     "@babel/plugin-transform-runtime": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
     "@babel/preset-react": "^7.14.5",
+    "@babel/eslint-parser": "^7.18.2",
     "@types/react-pdf": "^5.0.5",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
-    "babel-eslint": "^10.0.0",
     "enzyme": "^3.10.0",
     "eslint": "~7.19.0",
     "eslint-config-prettier": "^8.3.0",
